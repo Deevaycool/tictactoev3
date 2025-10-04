@@ -63,13 +63,13 @@ export function Footer() {
 				<AnimatedContainer className="space-y-4">
 					<div className="flex items-center gap-2">
 						<Gamepad2 className="size-8 text-primary" />
-						<span className="text-xl font-bold text-foreground">Tic-Tac-Go</span>
+						<span className="text-xl font-bold text-foreground">Tic Tac Toe</span>
 					</div>
 					<p className="text-muted-foreground text-sm max-w-xs">
-						Challenge yourself with our unbeatable AI or play with friends. The ultimate tic-tac-toe experience with perfect minimax algorithm.
+						Experience the best tic tac toe game online with unbeatable AI. Play tic tac toe 2 player mode or challenge our advanced computer opponent. The classic XO game enhanced with perfect minimax algorithm strategy.
 					</p>
 					<p className="text-muted-foreground mt-8 text-sm md:mt-4">
-						© {new Date().getFullYear()} Tic-Tac-Go. All rights reserved.
+						© {new Date().getFullYear()} Tic Tac Toe Game. Play the ultimate tac toe tic experience online.
 					</p>
 				</AnimatedContainer>
 

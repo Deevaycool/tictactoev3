@@ -452,44 +452,47 @@ export default function TicTacToe() {
               </Button>
             </div>
           </Card>
+
+          {/* Game Stats & Tips - Below Game */}
+          <div className="grid md:grid-cols-3 gap-4 mt-6">
+            <Card className="info-card p-4 animate-fade-in">
+              <h3 className="text-sm font-semibold mb-2 text-primary flex items-center gap-2">
+                🎯 Quick Tips
+              </h3>
+              <ul className="text-xs text-muted-foreground space-y-1">
+                <li>• Control the center square</li>
+                <li>• Block opponent's winning moves</li>
+                <li>• Create multiple threats (forks)</li>
+                <li>• Think 2-3 moves ahead</li>
+              </ul>
+            </Card>
+
+            <Card className="info-card p-4 animate-fade-in">
+              <h3 className="text-sm font-semibold mb-2 text-accent flex items-center gap-2">
+                🏆 Game Stats
+              </h3>
+              <div className="text-xs text-muted-foreground space-y-1">
+                <p>Mode: {gameMode === 'computer' ? '🤖 vs AI' : '👥 vs Friend'}</p>
+                {gameMode === 'computer' && (
+                  <p>Difficulty: {difficulty === 'easy' ? '😊 Easy' : difficulty === 'medium' ? '🎯 Medium' : '🔥 Hard'}</p>
+                )}
+                <p>Current: {currentPlayer}'s turn</p>
+              </div>
+            </Card>
+
+            <Card className="info-card p-4 animate-fade-in">
+              <h3 className="text-sm font-semibold mb-2 text-success flex items-center gap-2">
+                💡 Did You Know?
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                On hard mode, the AI uses the minimax algorithm, making it impossible to beat with perfect play!
+              </p>
+            </Card>
+          </div>
         </div>
 
-        {/* Right Column - Game Stats & Tips */}
-        <div className="space-y-4 order-3">
-          <Card className="info-card p-4 animate-fade-in">
-            <h3 className="text-sm font-semibold mb-2 text-primary flex items-center gap-2">
-              🎯 Quick Tips
-            </h3>
-            <ul className="text-xs text-muted-foreground space-y-1">
-              <li>• Control the center square</li>
-              <li>• Block opponent's winning moves</li>
-              <li>• Create multiple threats (forks)</li>
-              <li>• Think 2-3 moves ahead</li>
-            </ul>
-          </Card>
-
-          <Card className="info-card p-4 animate-fade-in">
-            <h3 className="text-sm font-semibold mb-2 text-accent flex items-center gap-2">
-              🏆 Game Stats
-            </h3>
-            <div className="text-xs text-muted-foreground space-y-1">
-              <p>Mode: {gameMode === 'computer' ? '🤖 vs AI' : '👥 vs Friend'}</p>
-              {gameMode === 'computer' && (
-                <p>Difficulty: {difficulty === 'easy' ? '😊 Easy' : difficulty === 'medium' ? '🎯 Medium' : '🔥 Hard'}</p>
-              )}
-              <p>Current: {currentPlayer}'s turn</p>
-            </div>
-          </Card>
-
-          <Card className="info-card p-4 animate-fade-in">
-            <h3 className="text-sm font-semibold mb-2 text-success flex items-center gap-2">
-              💡 Did You Know?
-            </h3>
-            <p className="text-xs text-muted-foreground">
-              On hard mode, the computer uses the minimax algorithm - making it mathematically perfect and unbeatable! Best you can do is a draw.
-            </p>
-          </Card>
-        </div>
+        {/* Right Column - Empty for balanced layout */}
+        <div className="hidden lg:block order-3"></div>
       </div>
     </div>
   );
