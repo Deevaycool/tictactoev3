@@ -29,16 +29,11 @@ const Index = () => {
           <div className="flex-1 px-4 py-8 max-w-7xl mx-auto w-full">
             <div className="text-center mb-8">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-                Tic-Tac-Go
+                World's Best Tic Tac Toe Game
               </h1>
               <p className="text-xl text-muted-foreground">
                 Challenge the Unbeatable AI
               </p>
-            </div>
-
-            {/* Mid-content Ad */}
-            <div className="mb-8 flex justify-center">
-              <AdBanner id="ad-mid-content" className="w-full max-w-[728px] min-h-[90px] bg-muted/10 rounded" />
             </div>
 
             <TicTacToe />
